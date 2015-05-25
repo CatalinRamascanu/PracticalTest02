@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/lay">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="SERVER"
+                android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serverPortEditText" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+                android:layout_marginTop="40dp" android:layout_toLeftOf="@+id/textView" android:text="2300"
+                android:hint="Server Port"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Server"
+                android:id="@+id/startServerButton" android:layout_alignTop="@+id/serverPortEditText"
+                android:layout_toRightOf="@+id/serverPortEditText" android:layout_alignParentRight="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="CLIENT"
+                android:id="@+id/textView2" android:layout_below="@+id/startServerButton"
+                android:layout_centerHorizontal="true" android:layout_marginTop="62dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientAddressEditText" android:layout_below="@+id/textView2" android:layout_alignParentLeft="true"
+                android:text="127.0.0.1" android:layout_toLeftOf="@+id/textView2" android:hint="Adress"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientPortEditText" android:layout_below="@+id/clientAddressEditText"
+                android:layout_alignParentLeft="true" android:layout_toLeftOf="@+id/startServerButton"
+                android:text="2300" android:hint="Port"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Command"
+                android:id="@+id/sendCommandButton"
+                android:layout_below="@+id/textView2" android:layout_toRightOf="@+id/clientAddressEditText"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/resultTextView"
+                android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" android:layout_below="@+id/clientPortEditText"/>
+    </RelativeLayout>
+</LinearLayout>
